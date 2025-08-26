@@ -122,11 +122,11 @@ li {
     font-size: 0.9em;
 }
 
-/* Skills Section - Redesigned */
+/* Skills Section - Updated to a single row */
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .skill-category h3 {
@@ -141,6 +141,28 @@ li {
     font-size: 0.9em;
     color: var(--light-text-color);
     line-height: 1.5;
+}
+
+/* Publications Section - New styling for abstracts */
+.publication-item {
+    margin-bottom: 30px;
+}
+
+.publication-item h3 {
+    margin-bottom: 5px;
+}
+
+.publication-details {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+}
+
+.abstract {
+    margin-top: 5px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 
 /* Footer Section */
