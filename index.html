@@ -3,179 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erfaneh Mahmoudzadeh - Portfolio</title>
+    <title>Erfaneh Mahmoudzadeh · ML & Data Scientist</title>
+    <meta name="description" content="Erfaneh Mahmoudzadeh, Data Scientist specializing in machine learning, deep generative models, and graph neural networks.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-            <div class="profile-info">
-                <h1>Erfaneh Mahmoudzadeh</h1>
-                <p>Highly motivated M.Sc. in Computing Science with expertise in Machine Learning, Deep Learning, and Generative AI, seeking to leverage extensive research and practical experience to solve complex data challenges.</p>
+    <div class="progress" id="progress"></div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <div class="nav-brand"><span class="dot"></span> Erfaneh Mahmoudzadeh</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Research</a>
+                <a href="#education">Education</a>
             </div>
-            <div class="contact-info">
-                <p><i class="fa fa-envelope"></i> <a href="mailto:er.mahmoudzadeh@gmail.com">er.mahmoudzadeh@gmail.com</a></p>
-                <p><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/erfaneh-mahmoudzadeh/">erfaneh-mahmoudzadeh</a></p>
-                <p><i class="fa fa-github"></i> <a href="https://github.com/erfmah">erfmah</a></p>
-                <p><i class="fa fa-map-marker"></i> BC, Canada</p>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <canvas id="graph" aria-hidden="true"></canvas>
+        <div class="hero-fade"></div>
+        <div class="container">
+            <span class="eyebrow"><span class="pulse"></span> Data Scientist · Graph Machine Learning</span>
+            <h1>Teaching machines to <span class="accent">predict the links</span> between things.</h1>
+            <p class="hero-sub">
+                M.Sc. in Computing Science with deep expertise in machine learning, deep generative models,
+                and graph neural networks, turning research-grade methods into production systems that solve
+                real, large-scale data problems.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="mailto:er.mahmoudzadeh@gmail.com"><i class="fa-solid fa-envelope"></i> Get in touch</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/erfaneh-mahmoudzadeh/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                <a class="btn btn-ghost" href="https://github.com/erfmah" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+            <div class="hero-meta">
+                <span><i class="fa-solid fa-location-dot"></i> BC, Canada</span>
+                <span><i class="fa-solid fa-graduation-cap"></i> Simon Fraser University</span>
+                <span><i class="fa-solid fa-flask"></i> 3 peer-reviewed publications</span>
             </div>
         </div>
     </header>
 
-    <main class="main-content container">
-
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <p>Python, C++, Java, SQL, R, Matlab</p>
+    <main>
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">01 / Profile</span>
+                    <h2>About</h2>
                 </div>
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <p>Data Science, Machine Learning, Deep Learning, Transformers, Graph Neural Networks (GNNs), Generative AI, LLM, Database, NLP</p>
+                <div class="about-grid">
+                    <div class="card about-card reveal">
+                        <p>
+                            I work at the intersection of <strong>research and production machine learning</strong>.
+                            My academic background centers on deep generative models for graphs, predicting links,
+                            subgraphs, and node labels from partial structure, and I bring that same rigor to building
+                            reliable, large-scale data systems.
+                        </p>
+                        <p>
+                            At Visier I build predictive models and LLM-powered systems on large, multi-dimensional
+                            HR datasets, combining hyperparameter optimization, retrieval-augmented generation, and
+                            careful evaluation to ship trustworthy results to internal and external clients.
+                        </p>
+                        <p>
+                            Outside of work I play chromatic harmonica, follow the economics literature, and stay
+                            curious about how structure, in graphs, organizations, and markets, can be learned and predicted.
+                        </p>
+                    </div>
+                    <div class="stats reveal">
+                        <div class="stat"><div class="n">3.9</div><div class="l">M.Sc. GPA / 4.0, SFU</div></div>
+                        <div class="stat"><div class="n">3</div><div class="l">Publications: IJCAI, ECAI, CIKM</div></div>
+                        <div class="stat"><div class="n">6+</div><div class="l">Years in ML & data science</div></div>
+                        <div class="stat"><div class="n">10M+</div><div class="l">Records modeled in production</div></div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Frameworks/Libraries</h3>
-                    <p>Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Hugging Face</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Developer Tools</h3>
-                    <p>Git, Docker, Excel, AWS</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="experience-item">
-                <h3>M.Sc. in Computing Science</h3>
-                <p class="company-date">Simon Fraser University (SFU) | <span class="location">Burnaby, Canada</span> | <span class="date">Sept. 2021 - Aug. 2024</span></p>
-                <ul>
-                    <li>GPA: 3.9/4.0</li>
-                    <li>Thesis: Deep Generative Models for Subgraph Prediction - Best thesis award nominee</li>
-                    <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Transformers, GNNs, Generative AI, LLM, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git</p>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>B.Sc. in Software Engineering</h3>
-                <p class="company-date">Shahid Beheshti University (SBU) | <span class="location">Tehran, Iran</span> | <span class="date">Sept. 2015 - Feb. 2020</span></p>
-                <ul>
-                    <li>GPA: 3.9/4.0</li>
-                    <li>Thesis: Forecasting Macroeconomic Variables Using Firm-Level Data - Best thesis award</li>
-                    <p class="skills-used">Skills: Python, SQL, R, Matlab, Data Science, Machine Learning, Deep Learning, Pytorch, Numpy, scikit-learn, SciPy, Matplotlib, Excel</p>
-                </ul>
             </div>
         </section>
 
-        <section id="experience" class="section">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <h3>Data Scientist Intern</h3>
-                <p class="company-date">Visier | <span class="location">Burnaby, Canada</span> | <span class="date">Jan. 2025 - Present</span></p>
-                <ul>
-                    <li>Developed advanced data analysis on large-scale, multi-dimensional HR datasets using AWS infrastructure to create comprehensive reports on industry trends.</li>
-                    <li>Optimized predictive model performance through hyperparameter tuning, significantly improving the AUC by 0.1 and Uplift by 1.1 and preventing overfitting of employee resignation rate predictions.</li>
-                    <li>Pioneered a specialized LLM agent utilizing AWS Databricks, Model Context Protocol (MCP) and Retrieval-Augmented Generation (RAG) to provide secure, accurate responses to security questions for internal and external clients.</li>
-                    <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Generative AI, LLM, Database, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git, Docker, Excel, AWS</p>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Data Scientist Intern</h3>
-                <p class="company-date">Zen Artech Services | <span class="date">Jul. 2022 - Oct. 2022</span></p>
-                <ul>
-                    <li>Developed a recommendation system using link prediction algorithms to improve both the accuracy and AUC.</li>
-                    <li>Collaborated with teams to ensure seamless integration. Optimized performance, resulting in an up to 4% improvement in AUC on Amazon dataset.</li>
-                    <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Transformers, GNNs, Generative AI, LLM, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git, AWS</p>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Database Engineer Intern</h3>
-                <p class="company-date">Tosan Intelligent Data Miners | <span class="date">Jul. 2018 - Sept. 2018</span></p>
-                <ul>
-                    <li>Developed and implemented a Regex solution to automate response data analysis, streamlining report classification process and saving the team an average of 10 hours per month</li>
-                    <li>Engineered and implemented innovative data validity verification algorithms, leading to a 5% enhancement in response time for identifying relationships among loan applicants</li>
-                    <p class="skills-used">Skills: Java, SQL, Data Science, Database, Excel</p>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="experience-item">
-                <h3>Graph-based Anomaly Detection with Transformers</h3>
-                <p class="company-date">Research Assistant at SFU | <span class="date">Oct. 2024 - Dec. 2024</span></p>
-                <ul>
-                    <li>Developed a deep learning architecture combining Graph Attention Networks and Transformers for detecting structural anomalies in Reddit social network data.</li>
-                    <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Transformers, GNNs, Generative AI, LLM, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git, NLP</p>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Graph Neural Network-Based Cancer Diagnosis</h3>
-                <p class="company-date">Research Assistant at SFU | <span class="date">Aug. 2024 - Oct. 2024</span></p>
-                <ul>
-                    <li>Developed, trained, a GNN based model to generate synthetic medical images for a better performance on trainging image detection models.</li>
-                    <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Transformers, GNNs, Generative AI, LLM, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git</p>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Transformers for Handwritten Digit Recognition</h3>
-                <p class="company-date">Research Assistant at SBU | <span class="date">Jan. 2020 - Jun. 2020</span></p>
-                <ul>
-                    <li>Developed a handwritten digit detection model using Transformer Networks and BERT on the NIST SD19 dataset.</li>
-                    <p class="skills-used">Skills: Python, Data Science, Machine Learning, Deep Learning, Transformers, Generative AI, Pytorch, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git</p>
-                </ul>
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">02 / Toolkit</span>
+                    <h2>Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="card skill-card reveal">
+                        <h3>Languages</h3>
+                        <div class="chips">
+                            <span class="chip">Python</span><span class="chip">C++</span><span class="chip">Java</span>
+                            <span class="chip">SQL</span><span class="chip">R</span><span class="chip">Matlab</span>
+                        </div>
+                    </div>
+                    <div class="card skill-card reveal">
+                        <h3>Core</h3>
+                        <div class="chips">
+                            <span class="chip">Machine Learning</span><span class="chip">Deep Learning</span>
+                            <span class="chip">Transformers</span><span class="chip">GNNs</span>
+                            <span class="chip">Generative AI</span><span class="chip">LLM</span>
+                            <span class="chip">NLP</span><span class="chip">Databases</span>
+                        </div>
+                    </div>
+                    <div class="card skill-card reveal">
+                        <h3>Frameworks</h3>
+                        <div class="chips">
+                            <span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
+                            <span class="chip">scikit-learn</span><span class="chip">DGL</span>
+                            <span class="chip">NumPy</span><span class="chip">SciPy</span>
+                            <span class="chip">Pandas</span><span class="chip">Hugging Face</span><span class="chip">Matplotlib</span>
+                        </div>
+                    </div>
+                    <div class="card skill-card reveal">
+                        <h3>Tooling</h3>
+                        <div class="chips">
+                            <span class="chip">Git</span><span class="chip">Docker</span>
+                            <span class="chip">AWS</span><span class="chip">Excel</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="publications" class="section">
-            <h2>Research & Publications</h2>
-            <div class="publication-item">
-                <h3><a href="https://dl.acm.org/doi/10.1145/3583780.3614941">Joint Link Prediction Via Inference from a Model</a> - CIKM 2023</h3>
-                <p class="publication-details">
-                    <a href="https://github.com/parmisnaddaf/Joint-Link-Prediction"><i class="fa fa-github"></i> GitHub Repository</a>
-                </p>
-                <p class="abstract">A Joint Link Prediction Query (JLPQ) specifies a set of links to be predicted, given another set of links as well as node attributes as evidence. While single link prediction has been well studied in literature on deep graph learning, predicting multiple links together has gained little attention. This paper presents a novel framework for computing JLPQs using a probabilistic deep Graph Generative Model. Specifically, we develop inference procedures for an inductively trained Variational Graph Auto-Encoder (VGAE) that estimates the joint link probability for any input JLPQ, without retraining. For evaluation, we apply inference to a range of joint link prediction queries on six benchmark datasets. We find that for most datasets and query types, joint link prediction via inference from a model achieves good predictive performance, better than the independent link prediction baselines (by 0.02-0.4 AUC points depending on the dataset).</p>
-                <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Transformers, GNNs, Generative AI, LLM, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git</p>
-            </div>
-            <div class="publication-item">
-                <h3><a href="https://ebooks.iospress.nl/volumearticle/69951">Deep Generative Models for Subgraph Prediction</a> - ECAI 2024</h3>
-                <p class="publication-details">
-                    <a href="https://github.com/erfmah/Answering_Graph_Queries"><i class="fa fa-github"></i> GitHub Repository</a>
-                </p>
-                <p class="abstract">Graph Neural Networks (GNNs) are important across different domains, such as social network analysis and recommendation systems, due to their ability to model complex relational data. This paper introduces subgraph queries as a new task for deep graph learning. Unlike traditional graph prediction tasks that focus on individual components like link prediction or node classification, subgraph queries jointly predict the components of a target subgraph based on evidence that is represented by an observed subgraph. For instance, a subgraph query can predict a set of target links and/or node labels. To answer subgraph queries, we utilize a probabilistic deep Graph Generative Model. Specifically, we inductively train a Variational Graph Auto-Encoder (VGAE) model, augmented to represent a joint distribution over links, node features and labels. Bayesian optimization is used to tune a weighting for the relative importance of links, node features and labels in a specific domain. We describe a deterministic and a sampling-based inference method for estimating subgraph probabilities from the VGAE generative graph distribution, without retraining, in zero-shot fashion. For evaluation, we apply the inference methods on a range of subgraph queries on six benchmark datasets. We find that inference from a model achieves superior predictive performance, surpassing independent prediction baselines with improvements in AUC scores ranging from 0.06 to 0.2 points, depending on the dataset.</p>
-                <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Transformers, GNNs, Generative AI, LLM, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git</p>
-            </div>
-            <div class="publication-item">
-                <h3><a href="https://github.com/Ali-Khazraee/VGAE-">Enhancing Graph Generation With First-Order Logic Rules</a> - IJCAI/TKR 2025</h3>
-                <p class="publication-details">
-                  <a href="https://github.com/Ali-Khazraee/VGAE-"><i class="fa fa-github"></i> GitHub Repository</a>
-                </p>
-                <p class="abstract">Existing graph generative models produce graphs that are often quite realistic, but sometimes miss domain-specific patterns. Enhancing graph learning with domain knowledge is one of the current frontiers for neural models of graph data. In this paper, we propose a new approach to enhancing deep graph generative models with knowledge that is represented by first-order logic rules. First-order logic provides an expressive formalism for representing interpretable causal knowledge about relational structures. Our conceptual contribution is a new first-order semantic loss function for training a graph generative model on relational data: maximize the model likelihood subject to a rule moment matching constraint, namely that the expected instance count of each rule matches its observed instance count. Our algorithmic contribution is a novel method for computing the expected instance count of a first-order rule for a Variational Graph Autoencoder model, based on matrix multiplication. Empirical evaluation on five benchmark datasets, both homogeneous and heterogeneous, shows that rule moment matching improves the quality of generated graphs substantially (by orders of magnitude on standard graph quality metrics), and improves predictive accuracy on the downstream task of node classification.</p>
-                <p class="skills-used">Skills: Python, SQL, Data Science, Machine Learning, Deep Learning, Transformers, GNNs, Generative AI, LLM, Pytorch, TensorFlow, Numpy, scikit-learn, SciPy, DGL, Pandas, Matplotlib, Git, AWS</p>
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">03 / Where I've worked</span>
+                    <h2>Experience</h2>
+                </div>
+                <div class="timeline">
+                    <div class="tl-item reveal">
+                        <div class="card tl-card">
+                            <div class="role-top">
+                                <h3>Data Scientist Intern</h3>
+                                <span class="role-when">Jan. 2025 to Present</span>
+                            </div>
+                            <div class="role-org">Visier <span class="loc">· Burnaby, Canada</span></div>
+                            <ul>
+                                <li>Built advanced analysis on large-scale, multi-dimensional HR datasets on AWS to produce comprehensive reports on industry trends.</li>
+                                <li>Optimized a predictive model of employee resignation through hyperparameter tuning, improving AUC by 0.1 and Uplift by 1.1 while preventing overfitting.</li>
+                                <li>Pioneered a specialized LLM agent on AWS using Model Context Protocol (MCP) and Retrieval-Augmented Generation (RAG) for secure, accurate answers to security questions for internal and external clients.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span class="tag">Python</span><span class="tag">AWS</span><span class="tag">LLM / RAG</span>
+                                <span class="tag">PyTorch</span><span class="tag">SQL</span><span class="tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="card tl-card">
+                            <div class="role-top">
+                                <h3>Data Scientist Intern</h3>
+                                <span class="role-when">Jul. 2022 to Oct. 2022</span>
+                            </div>
+                            <div class="role-org">Zen Artech Services</div>
+                            <ul>
+                                <li>Developed a recommendation system using link-prediction algorithms to improve accuracy and AUC.</li>
+                                <li>Collaborated across teams for seamless integration and optimized performance, reaching up to a 4% AUC improvement on the Amazon dataset.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span class="tag">GNNs</span><span class="tag">Recommendation</span>
+                                <span class="tag">PyTorch</span><span class="tag">DGL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="card tl-card">
+                            <div class="role-top">
+                                <h3>Database Engineer Intern</h3>
+                                <span class="role-when">Jul. 2018 to Sept. 2018</span>
+                            </div>
+                            <div class="role-org">Tosan Intelligent Data Miners</div>
+                            <ul>
+                                <li>Built a Regex solution to automate response-data analysis, streamlining report classification and saving the team about 10 hours per month.</li>
+                                <li>Engineered data-validity verification algorithms, improving response time for identifying relationships among loan applicants by 5%.</li>
+                            </ul>
+                            <div class="tag-row">
+                                <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Databases</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="awards" class="section">
-            <h2>Awards & Honors</h2>
-            <ul>
-                <li>Best Poster Award at Huawei Joint Lab Annual Workshop (Nov. 2024)</li>
-                <li>Best Master's Thesis Award Nominee (July 2024)</li>
-                <li>Upper Bound talent Bursary at Amii (Apr. 2024)</li>
-                <li>Honored to be the best faculty thesis (Feb. 2020)</li>
-            </ul>
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">04 / Selected work</span>
+                    <h2>Projects</h2>
+                </div>
+                <div class="proj-grid">
+                    <div class="card proj-card reveal">
+                        <span class="kicker">Research · SFU</span>
+                        <h3>Graph-based Anomaly Detection with Transformers</h3>
+                        <p>A deep architecture combining Graph Attention Networks and Transformers to detect structural anomalies in Reddit social-network data.</p>
+                        <span class="when">Oct. 2024 to Dec. 2024</span>
+                    </div>
+                    <div class="card proj-card reveal">
+                        <span class="kicker">Research · SFU</span>
+                        <h3>GNN-Based Cancer Diagnosis</h3>
+                        <p>Trained a GNN-based model to generate synthetic medical images, improving the performance of downstream image-detection models.</p>
+                        <span class="when">Aug. 2024 to Oct. 2024</span>
+                    </div>
+                    <div class="card proj-card reveal">
+                        <span class="kicker">Research · SBU</span>
+                        <h3>Transformers for Handwritten Digit Recognition</h3>
+                        <p>A handwritten-digit detection model using Transformer Networks and BERT on the NIST SD19 dataset.</p>
+                        <span class="when">Jan. 2020 to Jun. 2020</span>
+                    </div>
+                </div>
+            </div>
         </section>
-        
+
+        <!-- PUBLICATIONS -->
+        <section class="section" id="publications">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">05 / Peer-reviewed research</span>
+                    <h2>Research &amp; Publications</h2>
+                    <p class="lead">Deep generative models and graph neural networks for link, subgraph, and structure prediction. Tap a paper to read the abstract.</p>
+                </div>
+
+                <article class="card pub reveal">
+                    <div class="pub-top">
+                        <span class="pub-venue">CIKM 2023</span>
+                    </div>
+                    <h3><a href="https://dl.acm.org/doi/10.1145/3583780.3614941" target="_blank" rel="noopener">Joint Link Prediction Via Inference from a Model</a></h3>
+                    <div class="pub-links"><a href="https://github.com/parmisnaddaf/Joint-Link-Prediction" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Repository</a></div>
+                    <button class="pub-toggle"><span class="caret"><i class="fa-solid fa-chevron-right"></i></span> Read abstract</button>
+                    <p class="pub-abstract">
+                        A Joint Link Prediction Query (JLPQ) specifies a set of links to be predicted, given another set of links as well as node attributes as evidence. While single link prediction has been well studied in literature on deep graph learning, predicting multiple links together has gained little attention. This paper presents a novel framework for computing JLPQs using a probabilistic deep Graph Generative Model. Specifically, we develop inference procedures for an inductively trained Variational Graph Auto-Encoder (VGAE) that estimates the joint link probability for any input JLPQ, without retraining. For evaluation, we apply inference to a range of joint link prediction queries on six benchmark datasets. We find that for most datasets and query types, joint link prediction via inference from a model achieves good predictive performance, better than the independent link prediction baselines (by 0.02 to 0.4 AUC points depending on the dataset).
+                    </p>
+                </article>
+
+                <article class="card pub reveal">
+                    <div class="pub-top">
+                        <span class="pub-venue">ECAI 2024</span>
+                    </div>
+                    <h3><a href="https://ebooks.iospress.nl/volumearticle/69951" target="_blank" rel="noopener">Deep Generative Models for Subgraph Prediction</a></h3>
+                    <div class="pub-links"><a href="https://github.com/erfmah/Answering_Graph_Queries" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Repository</a></div>
+                    <button class="pub-toggle"><span class="caret"><i class="fa-solid fa-chevron-right"></i></span> Read abstract</button>
+                    <p class="pub-abstract">
+                        Graph Neural Networks (GNNs) are important across different domains, such as social network analysis and recommendation systems, due to their ability to model complex relational data. This paper introduces subgraph queries as a new task for deep graph learning. Unlike traditional graph prediction tasks that focus on individual components like link prediction or node classification, subgraph queries jointly predict the components of a target subgraph based on evidence that is represented by an observed subgraph. For instance, a subgraph query can predict a set of target links and/or node labels. To answer subgraph queries, we utilize a probabilistic deep Graph Generative Model. Specifically, we inductively train a Variational Graph Auto-Encoder (VGAE) model, augmented to represent a joint distribution over links, node features and labels. Bayesian optimization is used to tune a weighting for the relative importance of links, node features and labels in a specific domain. We describe a deterministic and a sampling-based inference method for estimating subgraph probabilities from the VGAE generative graph distribution, without retraining, in zero-shot fashion. For evaluation, we apply the inference methods on a range of subgraph queries on six benchmark datasets. We find that inference from a model achieves superior predictive performance, surpassing independent prediction baselines with improvements in AUC scores ranging from 0.06 to 0.2 points, depending on the dataset.
+                    </p>
+                </article>
+
+                <article class="card pub reveal">
+                    <div class="pub-top">
+                        <span class="pub-venue">IJCAI / TKR 2025</span>
+                    </div>
+                    <h3><a href="https://github.com/Ali-Khazraee/VGAE-" target="_blank" rel="noopener">Enhancing Graph Generation With First-Order Logic Rules</a></h3>
+                    <div class="pub-links"><a href="https://github.com/Ali-Khazraee/VGAE-" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Repository</a></div>
+                    <button class="pub-toggle"><span class="caret"><i class="fa-solid fa-chevron-right"></i></span> Read abstract</button>
+                    <p class="pub-abstract">
+                        Existing graph generative models produce graphs that are often quite realistic, but sometimes miss domain-specific patterns. Enhancing graph learning with domain knowledge is one of the current frontiers for neural models of graph data. In this paper, we propose a new approach to enhancing deep graph generative models with knowledge that is represented by first-order logic rules. First-order logic provides an expressive formalism for representing interpretable causal knowledge about relational structures. Our conceptual contribution is a new first-order semantic loss function for training a graph generative model on relational data: maximize the model likelihood subject to a rule moment matching constraint, namely that the expected instance count of each rule matches its observed instance count. Our algorithmic contribution is a novel method for computing the expected instance count of a first-order rule for a Variational Graph Autoencoder model, based on matrix multiplication. Empirical evaluation on five benchmark datasets, both homogeneous and heterogeneous, shows that rule moment matching improves the quality of generated graphs substantially (by orders of magnitude on standard graph quality metrics), and improves predictive accuracy on the downstream task of node classification.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">06 / Background</span>
+                    <h2>Education</h2>
+                </div>
+                <div class="edu-grid">
+                    <div class="card edu-card reveal">
+                        <h3>M.Sc. in Computing Science</h3>
+                        <div class="where">Simon Fraser University · Burnaby, Canada</div>
+                        <div class="when">Sept. 2021 to Aug. 2024</div>
+                        <p class="detail">Thesis: <strong>Deep Generative Models for Subgraph Prediction</strong>, Best Thesis Award nominee.</p>
+                        <span class="gpa">GPA 3.9 / 4.0</span>
+                    </div>
+                    <div class="card edu-card reveal">
+                        <h3>B.Sc. in Software Engineering</h3>
+                        <div class="where">Shahid Beheshti University · Tehran, Iran</div>
+                        <div class="when">Sept. 2015 to Feb. 2020</div>
+                        <p class="detail">Thesis: <strong>Forecasting Macroeconomic Variables Using Firm-Level Data</strong>, Best Thesis Award.</p>
+                        <span class="gpa">GPA 3.9 / 4.0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWARDS -->
+        <section class="section" id="awards">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-num">07 / Recognition</span>
+                    <h2>Awards &amp; Honors</h2>
+                </div>
+                <div class="award-grid">
+                    <div class="card award reveal">
+                        <div class="ic"><i class="fa-solid fa-award"></i></div>
+                        <div class="txt">Best Poster Award, Huawei Joint Lab Annual Workshop <span class="yr">Nov. 2024</span></div>
+                    </div>
+                    <div class="card award reveal">
+                        <div class="ic"><i class="fa-solid fa-scroll"></i></div>
+                        <div class="txt">Best Master's Thesis Award Nominee <span class="yr">July 2024</span></div>
+                    </div>
+                    <div class="card award reveal">
+                        <div class="ic"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                        <div class="txt">Upper Bound Talent Bursary, Amii <span class="yr">Apr. 2024</span></div>
+                    </div>
+                    <div class="card award reveal">
+                        <div class="ic"><i class="fa-solid fa-star"></i></div>
+                        <div class="txt">Best Faculty Thesis <span class="yr">Feb. 2020</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Erfaneh Mahmoudzadeh. All rights reserved.</p>
+        <div class="container footer-inner">
+            <div>
+                <h3>Let's build something.</h3>
+                <p>Open to ML and data science roles. Reach out anytime.</p>
+                <p><a href="mailto:er.mahmoudzadeh@gmail.com" style="color:#9fd9d2;">er.mahmoudzadeh@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:er.mahmoudzadeh@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/erfaneh-mahmoudzadeh/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/erfmah" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
+        <div class="container"><div class="footer-base">© 2025 Erfaneh Mahmoudzadeh. All rights reserved.</div></div>
     </footer>
 
+    <script>
+    // ---- Scroll progress + sticky nav state ----
+    const progress = document.getElementById('progress');
+    const nav = document.getElementById('nav');
+    function onScroll() {
+        const h = document.documentElement;
+        const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        progress.style.width = (scrolled * 100) + '%';
+        nav.classList.toggle('scrolled', h.scrollTop > 8);
+    }
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ---- Reveal on scroll ----
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ---- Publication abstract toggles ----
+    document.querySelectorAll('.pub-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const pub = btn.closest('.pub');
+            const open = pub.classList.toggle('open');
+            btn.childNodes[btn.childNodes.length - 1].textContent = open ? ' Hide abstract' : ' Read abstract';
+        });
+    });
+
+    // ---- Force-directed graph hero ----
+    (function () {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const canvas = document.getElementById('graph');
+        const ctx = canvas.getContext('2d');
+        let W, H, dpr, nodes = [], edges = [], mouse = { x: -9999, y: -9999 };
+
+        const NODE_COUNT = window.innerWidth < 640 ? 26 : 46;
+        const LINK_DIST = window.innerWidth < 640 ? 130 : 165;
+
+        function resize() {
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const rect = canvas.getBoundingClientRect();
+            W = rect.width; H = rect.height;
+            canvas.width = W * dpr; canvas.height = H * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function init() {
+            resize();
+            nodes = [];
+            for (let i = 0; i < NODE_COUNT; i++) {
+                nodes.push({
+                    x: Math.random() * W, y: Math.random() * H,
+                    vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
+                    r: 1.6 + Math.random() * 2.4
+                });
+            }
+        }
+
+        function step() {
+            ctx.clearRect(0, 0, W, H);
+            // build + draw edges
+            for (let i = 0; i < nodes.length; i++) {
+                const a = nodes[i];
+                if (!reduce) {
+                    a.x += a.vx; a.y += a.vy;
+                    if (a.x < 0 || a.x > W) a.vx *= -1;
+                    if (a.y < 0 || a.y > H) a.vy *= -1;
+                    // gentle pull toward mouse
+                    const mdx = mouse.x - a.x, mdy = mouse.y - a.y;
+                    const md = Math.hypot(mdx, mdy);
+                    if (md < 160) { a.vx += (mdx / md) * 0.012; a.vy += (mdy / md) * 0.012; }
+                    a.vx *= 0.985; a.vy *= 0.985;
+                }
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const b = nodes[j];
+                    const dx = a.x - b.x, dy = a.y - b.y;
+                    const d = Math.hypot(dx, dy);
+                    if (d < LINK_DIST) {
+                        const t = 1 - d / LINK_DIST;
+                        // highlight links near the cursor (a nod to link prediction)
+                        const near = Math.min(
+                            Math.hypot(mouse.x - a.x, mouse.y - a.y),
+                            Math.hypot(mouse.x - b.x, mouse.y - b.y)
+                        );
+                        const hot = near < 130 ? (1 - near / 130) : 0;
+                        ctx.strokeStyle = hot > 0
+                            ? `rgba(43,181,168,${(0.18 + hot * 0.55) * t})`
+                            : `rgba(120,170,180,${0.16 * t})`;
+                        ctx.lineWidth = hot > 0 ? 1.1 : 0.7;
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+                    }
+                }
+            }
+            // draw nodes
+            for (const n of nodes) {
+                const near = Math.hypot(mouse.x - n.x, mouse.y - n.y);
+                const hot = near < 130 ? (1 - near / 130) : 0;
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, n.r + hot * 1.6, 0, Math.PI * 2);
+                ctx.fillStyle = hot > 0.15 ? `rgba(111,210,200,${0.7 + hot * 0.3})` : 'rgba(150,195,202,0.55)';
+                ctx.fill();
+            }
+            requestAnimationFrame(step);
+        }
+
+        canvas.addEventListener('pointermove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left; mouse.y = e.clientY - rect.top;
+        });
+        canvas.addEventListener('pointerleave', () => { mouse.x = -9999; mouse.y = -9999; });
+        window.addEventListener('resize', () => { resize(); });
+
+        init();
+        step();
+    })();
+    </script>
 </body>
 </html>
